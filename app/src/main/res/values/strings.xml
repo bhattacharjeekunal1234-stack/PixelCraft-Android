@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PixelCraft</string>
+    <string name="tagline">Photo editor</string>
+
+    <!-- Toolbar menu -->
+    <string name="menu_import">Import</string>
+    <string name="menu_compare">Compare</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_export">Save</string>
+
+    <!-- Empty state -->
+    <string name="empty_title">No photo loaded</string>
+    <string name="empty_subtitle">Import a photo from your gallery to start editing.</string>
+    <string name="empty_import_button">Import photo</string>
+    <string name="empty_icon_description">Empty gallery illustration</string>
+
+    <!-- Tabs -->
+    <string-array name="editor_tabs">
+        <item>Light</item>
+        <item>Color</item>
+        <item>Filters</item>
+        <item>Transform</item>
+    </string-array>
+
+    <!-- Light tab -->
+    <string name="label_neutral">0</string>
+    <string name="label_brightness">Brightness</string>
+    <string name="label_contrast">Contrast</string>
+    <string name="label_exposure">Exposure</string>
+
+    <!-- Color tab -->
+    <string name="label_saturation">Saturation</string>
+    <string name="label_white_balance">White balance</string>
+    <string name="hint_white_balance">Cooler ← → Warmer</string>
+
+    <!-- Filters tab -->
+    <string name="filter_original">Original</string>
+    <string name="filter_grayscale">Grayscale</string>
+    <string name="filter_warm">Warm</string>
+    <string name="filter_cool">Cool</string>
+    <string name="filters_hint">Presets move the sliders — fine-tune them freely afterwards.</string>
+
+    <!-- Transform tab -->
+    <string name="rotate_left">Rotate 90° left</string>
+    <string name="rotate_right">Rotate 90° right</string>
+    <string name="crop">Crop</string>
+    <string name="transform_hint">Rotation applies in 90° steps. Crop shows an adjustable rectangle over the photo.</string>
+
+    <!-- Crop mode -->
+    <string name="crop_bar_hint">Drag the corners or the rectangle, then apply</string>
+    <string name="crop_apply">Apply crop</string>
+    <string name="crop_cancel">Cancel</string>
+    <string name="crop_empty_selection">Drag the corners to choose the crop area</string>
+    <string name="crop_too_small">Crop area is too small — drag the corners out a bit more</string>
+
+    <!-- Compare -->
+    <string name="compare_badge">ORIGINAL</string>
+
+    <!-- Busy overlay -->
+    <string name="busy_importing">Importing photo…</string>
+    <string name="busy_saving">Saving image…</string>
+    <string name="busy_rotating">Rotating…</string>
+
+    <!-- Dialogs -->
+    <string name="reset_dialog_title">Reset all edits?</string>
+    <string name="reset_dialog_message">Every adjustment, filter, crop and rotation will be undone.</string>
+    <string name="reset_dialog_positive">Reset</string>
+    <string name="discard_dialog_title">Discard edits and exit?</string>
+    <string name="discard_dialog_message">Your edits are not saved yet.</string>
+    <string name="discard_dialog_positive">Discard &amp; exit</string>
+    <string name="discard_dialog_negative">Keep editing</string>
+
+    <!-- Export -->
+    <string name="export_dialog_title">Export image</string>
+    <string name="export_format_jpeg">JPEG — smaller file size (recommended)</string>
+    <string name="export_format_png">PNG — lossless, larger file</string>
+    <string name="export_quality_label">JPEG quality</string>
+    <string name="export_quality_percent">%1$d%%</string>
+    <string name="export_save">Save</string>
+    <string name="export_saved_to">Saved to Pictures/PixelCraft as %1$s</string>
+
+    <!-- Snackbars / errors -->
+    <string name="snackbar_import_first">Import a photo first</string>
+    <string name="snackbar_finish_crop">Apply or cancel the crop first</string>
+    <string name="snackbar_nothing_to_reset">Nothing to reset yet</string>
+    <string name="error_unreadable_image">Could not read that image. Try a different photo.</string>
+    <string name="error_oom">Not enough memory for that image. Try a smaller photo.</string>
+    <string name="error_generic">Something went wrong: %1$s</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_import"
+        android:icon="@drawable/ic_import"
+        android:title="@string/menu_import"
+        app:iconTint="@color/pc_text_primary"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_compare"
+        android:icon="@drawable/ic_compare"
+        android:title="@string/menu_compare"
+        app:iconTint="@color/pc_text_primary"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_reset"
+        android:icon="@drawable/ic_reset"
+        android:title="@string/menu_reset"
+        app:iconTint="@color/pc_text_primary"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_save"
+        android:title="@string/menu_export"
+        app:iconTint="@color/pc_text_primary"
+        app:showAsAction="always" />
+</menu>

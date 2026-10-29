@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original "compare" glyph: two half-filled circles side by side. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+    <!-- Left half circle -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M11,12a7,7 0 0,0 -7,-7a7,7 0 0,0 0,14a7,7 0 0,0 7,-7zM4.6,12a5,5 0 0,1 4.4,-4.96v9.92A5,5 0 0,1 4.6,12z" />
+
+    <!-- Right half circle -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M20,5a7,7 0 0,0 -7,7a7,7 0 0,0 7,7a7,7 0 0,0 0,-14zM15.99,7.04A5,5 0 0,1 20.4,12a5,5 0 0,1 -4.41,4.96V7.04z" />
+
+    <!-- Divider -->
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1.4"
+        android:pathData="M12,3.5V20.5" />
+</vector>

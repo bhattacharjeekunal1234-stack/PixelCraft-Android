@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rotate-right glyph: open circular arc with an arrowhead (clockwise). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+    <!-- Arc from the north point (11,6) clockwise 270° to the east point (18,13) -->
+    <path
+        android:pathData="M11,6 A7,7 0 1,1 18,13"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Arrowhead at the east end pointing down -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M22,10 L22,16 L17,13 Z" />
+</vector>

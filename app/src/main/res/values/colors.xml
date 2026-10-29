@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PixelCraft dark palette -->
+    <color name="pc_background">#0D0E11</color>
+    <color name="pc_surface">#15171C</color>
+    <color name="pc_surface_2">#1C1F26</color>
+    <color name="pc_outline">#2A2E38</color>
+
+    <color name="pc_accent">#5B8DEF</color>
+    <color name="pc_on_accent">#0B1220</color>
+
+    <color name="pc_text_primary">#ECEEF3</color>
+    <color name="pc_text_secondary">#9AA1AE</color>
+
+    <color name="pc_scrim">#B3000000</color>
+</resources>

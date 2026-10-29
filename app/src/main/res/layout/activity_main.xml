@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pc_background"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pc_surface"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:subtitle="@string/tagline"
+            app:subtitleTextColor="@color/pc_text_secondary"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/pc_text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- ============ Empty state (shown before a photo is imported) ============ -->
+        <LinearLayout
+            android:id="@+id/emptyState"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:alpha="0.9"
+                android:contentDescription="@string/empty_icon_description"
+                android:src="@drawable/ic_import" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/empty_title"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="@color/pc_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/empty_subtitle"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/pc_text_secondary" />
+
+            <TextView
+                android:id="@+id/emptyImportButton"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_import_button"
+                android:paddingStart="28dp"
+                android:paddingEnd="28dp"
+                android:text="@string/empty_import_button"
+                android:textColor="@color/pc_on_accent" />
+        </LinearLayout>
+
+        <!-- ============ Editor area (shown once a photo is loaded) ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editorArea"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Photo preview card -->
+            <FrameLayout
+                android:id="@+id/imageCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_image_card"
+                app:layout_constraintBottom_toTopOf="@id/panelBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--
+                  This wrapper is exactly as large as the preview bitmap,
+                  so the crop overlay coordinates map 1:1 onto bitmap pixels.
+                -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imagePreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitCenter" />
+
+                    <com.pixelcraft.editor.ui.CropOverlayView
+                        android:id="@+id/cropOverlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <!-- ORIGINAL badge, visible while comparing -->
+                <TextView
+                    android:id="@+id/compareBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="12dp"
+                    android:background="@color/pc_scrim"
+                    android:paddingStart="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/compare_badge"
+                    android:textColor="@color/pc_text_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <!-- Busy overlay while importing / rotating / saving -->
+                <LinearLayout
+                    android:id="@+id/busyOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/pc_scrim"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminateTint="@color/pc_accent" />
+
+                    <TextView
+                        android:id="@+id/busyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/busy_importing"
+                        android:textColor="@color/pc_text_primary" />
+                </LinearLayout>
+
+                <!-- Crop confirmation bar, visible only during crop mode -->
+                <LinearLayout
+                    android:id="@+id/cropModeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/pc_scrim"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/cropHint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/crop_bar_hint"
+                        android:textColor="@color/pc_text_secondary"
+                        android:textSize="12sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cropCancelButton"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:text="@string/crop_cancel"
+                        android:textColor="@color/pc_text_secondary" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cropApplyButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:minWidth="0dp"
+                        android:text="@string/crop_apply"
+                        android:textColor="@color/pc_on_accent" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Bottom panel: tool tabs + their pages -->
+            <LinearLayout
+                android:id="@+id/panelBottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pc_surface"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pc_surface"
+                    app:tabIndicatorColor="@color/pc_accent"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabRippleColor="@color/pc_scrim"
+                    app:tabSelectedTextColor="@color/pc_accent"
+                    app:tabTextColor="@color/pc_text_secondary" />
+
+                <!--
+                  Fixed height: ViewPager2 measures its children as exact
+                  matches of itself, so wrap_content would collapse every
+                  page to zero. Each page holds a ScrollView anyway.
+                -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

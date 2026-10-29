@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Professional dark theme built on Material 3.
+      The palette lives in colors.xml so two contributors never need to
+      edit this file at the same time.
+    -->
+    <style name="Theme.PixelCraft" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/pc_accent</item>
+        <item name="colorOnPrimary">@color/pc_on_accent</item>
+        <item name="android:colorBackground">@color/pc_background</item>
+        <item name="colorSurface">@color/pc_surface</item>
+        <item name="colorOnSurface">@color/pc_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/pc_text_secondary</item>
+        <item name="colorOutline">@color/pc_outline</item>
+
+        <item name="android:textColorPrimary">@color/pc_text_primary</item>
+        <item name="android:textColorSecondary">@color/pc_text_secondary</item>
+
+        <item name="android:statusBarColor">@color/pc_surface</item>
+        <item name="android:navigationBarColor">@color/pc_surface</item>
+    </style>
+
+    <style name="TextAppearance.PixelCraft.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pc_text_primary</item>
+    </style>
+
+    <style name="TextAppearance.PixelCraft.SliderLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/pc_text_primary</item>
+    </style>
+
+    <style name="TextAppearance.PixelCraft.SliderValue" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/pc_text_secondary</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+</resources>
