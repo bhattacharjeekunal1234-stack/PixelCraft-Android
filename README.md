@@ -60,10 +60,20 @@ AI tools were used during development to assist with code generation, debugging,
 5. Complete the installation and launch PixelCraft.
 
 ## 7. Project Screenshots
-Coming Soon
+## App Screenshots
 
-
-
+<p align="center">
+  <img src="Screenshot 2026-10-31 080126.png" width="300">
+  <img src="Screenshot 2026-10-31 080152.png" width="300">
+  <img src="Screenshot 2026-10-31 080326.png" width="300">
+  <img src="sScreenshot 2026-10-31 080336.png" width="300">
+  <img src="Screenshot 2026-10-31 082021.png" width="300">
+  <img src="Screenshot 2026-10-31 082030.png" width="300">
+  <img src="Screenshot 2026-10-31 082056.png" width="300">
+  <img src="Screenshot 2026-10-31 082104.png" width="300">
+  <img src="Screenshot 2026-10-31 082113.png" width="300">
+  <img src="Screenshot 2026-10-31 082122.png" width="300">
+</p>
 ## 8. Learning Outcomes
 
 - Gained practical experience in Android application development.
