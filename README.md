@@ -59,21 +59,72 @@ AI tools were used during development to assist with code generation, debugging,
 4. Allow installation from the requested source if prompted.
 5. Complete the installation and launch PixelCraft.
 
-## 7. Project Screenshots
-## App Screenshots
+## 7. Application Screenshots and Demonstration
 
-<p align="center">
-  <img src="Screenshot 2026-10-31 080126.png" width="300">
-  <img src="Screenshot 2026-10-31 080152.png" width="300">
-  <img src="Screenshot 2026-10-31 080326.png" width="300">
-  <img src="Screenshot 2026-10-31 080336.png" width="300">
-  <img src="Screenshot 2026-10-31 082021.png" width="300">
-  <img src="Screenshot 2026-10-31 082030.png" width="300">
-  <img src="Screenshot 2026-10-31 082056.png" width="300">
-  <img src="Screenshot 2026-10-31 082104.png" width="300">
-  <img src="Screenshot 2026-10-31 082113.png" width="300">
-  <img src="Screenshot 2026-10-31 082122.png" width="300">
-</p>
+The following screenshots demonstrate the application interface, photo import process, editing controls, filters, and image transformation features of PixelCraft.
+
+<table>
+<tr>
+<td align="center">
+<img src="Screenshot%202026-10-31%20080126.png" width="220">
+
+**Figure 1:** Android home screen of the test device.
+</td>
+<td align="center">
+<img src="Screenshot%202026-10-31%20080152.png" width="220">
+
+**Figure 2:** App launch screen with no photo loaded. The toolbar provides import, compare, reset, and export options.
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="Screenshot%202026-10-31%20080326.png" width="220">
+
+**Figure 3:** System Photo Picker displaying the Collections tab with Favorites and Camera.
+</td>
+<td align="center">
+<img src="Screenshot%202026-10-31%20080336.png" width="220">
+
+**Figure 4:** Camera collection in the Photo Picker, showing no photos.
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082021.png" width="220">
+
+**Figure 5:** Photos tab showing the system Photo Picker. PixelCraft accesses only user-selected photos, without requiring broad storage permission.
+</td>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082030.png" width="220">
+
+**Figure 6:** Photo selected in the picker, ready for import using the Done button.
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082056.png" width="220">
+
+**Figure 7:** Light tab providing Brightness, Contrast, and Exposure adjustment sliders.
+</td>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082104.png" width="220">
+
+**Figure 8:** Color tab providing Saturation and White Balance adjustments.
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082113.png" width="220">
+
+**Figure 9:** Filters tab containing Original, Grayscale, Warm, and Cool presets, with further manual adjustment.
+</td>
+<td align="center">
+<img src="Screenshot%202026-10-31%20082122.png" width="220">
+
+**Figure 10:** Transform tab providing Rotate 90° Left, Rotate 90° Right, and Crop options.
+</td>
+</tr>
+</table>
 ## 8. Learning Outcomes
 
 - Gained practical experience in Android application development.
