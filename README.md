@@ -1,99 +1,88 @@
-# PixelCraft 📸
+# PixelCraft – Android Photography Application
 
-A modern, dark-themed photo editor for Android, built as a college
-Photography subject project. Import a photo, adjust light and color,
-apply filters, crop and rotate, compare before/after, and export the
-result to your gallery as JPEG or PNG.
+## Computational Photography Project
 
-| | |
+**Project Name:** PixelCraft  
+**Project Type:** Android Application  
+**Subject:** Computational Photography  
+**Platform:** Android  
+**Development Environment:** Android Studio  
+**Programming Language:** Kotlin
+
+---
+
+## 1. Introduction
+
+PixelCraft is an Android-based photography application developed as part of the Computational Photography course project.
+
+The application provides a dedicated interface for accessing and organizing photographs through different sections, including Photos and Collections. The project explores mobile application development in the field of digital photography and image management.
+
+## 2. Objectives
+
+- To develop an Android-based photography application.
+- To create a simple and user-friendly interface for managing photographs.
+- To organize photographs using dedicated collections.
+- To explore the relationship between mobile application development and digital photography.
+- To gain practical experience with Android Studio and Kotlin.
+
+## 3. Technologies Used
+
+| Technology | Purpose |
 |---|---|
-| **Platform** | Android 7.0+ (API 24), optimized and tested on current Android |
-| **Language** | Kotlin |
-| **UI** | XML layouts, Material 3 dark theme, ViewBinding |
-| **Image engine** | Android Bitmap + Canvas APIs, pure-Kotlin pixel math |
-| **Status** | MVP complete — all listed features are implemented |
+| Kotlin | Application development |
+| Android Studio | Development environment |
+| Gradle | Project build system |
+| Android SDK | Android application framework |
 
-## Features
+## 4. Application Modules
 
-- **Gallery import** via the system Photo Picker (no storage permission
-  needed), with automatic down-sampling of huge camera photos and EXIF
-  orientation correction.
-- **Light adjustments** — brightness, contrast, exposure.
-- **Color adjustments** — saturation, white balance (warm ↔ cool).
-- **One-tap filters** — Original, Grayscale, Warm, Cool. Presets set the
-  sliders, so you can fine-tune after applying one.
-- **Crop** with a draggable rule-of-thirds overlay (corners, edges and
-  whole-rectangle move) and **90° step rotation**.
-- **Before/after compare** — tap the compare button to flip between the
-  untouched original and the current edit; an ORIGINAL badge marks it.
-- **Reset** everything with one confirmed action.
-- **Export** as JPEG (with adjustable quality) or PNG into
-  `Pictures/PixelCraft` in the gallery, correctly indexed so other apps
-  see it immediately.
-- **Robustness** — unreadable files, out-of-memory cases and save
-  failures produce readable error snackbars, never crashes.
+### Photos
+Provides the main interface for accessing photographs.
 
-## Getting started
+### Collections
+Provides a dedicated section for organizing photographs into collections.
 
-1. Install [Android Studio](https://developer.android.com/studio) (a
-   current version — the project targets AGP 8.13 / Gradle 9.5.1).
-2. **File → Open** and select this project folder.
-3. Let Gradle sync finish (first sync downloads dependencies).
-4. Pick a device: a physical phone with USB debugging, or an emulator
-   from **Device Manager**.
-5. Press **Run ▶**.
+### User Interface
+Uses a simple interface with separate navigation sections.
 
-### Build and test from the terminal
+## 5. Development Methodology
 
-```bash
-./gradlew assembleDebug          # build the APK
-./gradlew testDebugUnitTest      # run the unit tests
-./gradlew installDebug           # install on the connected device
-```
+The application was developed using Android Studio. The development process involved designing the application interface, implementing the application structure, integrating the required components, and testing the application using an Android emulator.
 
-The debug APK lands in `app/build/outputs/apk/debug/`.
+AI tools were used during development to assist with code generation, debugging, problem-solving, and understanding implementation concepts. The generated code was integrated and adapted during the development process.
 
-## Project structure
+## 6. Installation and Execution
 
-```
-app/src/main/java/com/pixelcraft/editor/
-├── MainActivity.kt          # single screen: toolbar, preview, tabs
-├── EditorViewModel.kt       # state + debounce + background rendering
-├── image/                   # pure-Kotlin engine (no Android imports)
-│   ├── ColorTransform.kt    #   per-pixel math, unit tested on the JVM
-│   ├── Adjustments.kt       #   slider state, -100..100 per parameter
-│   ├── FilterType.kt        #   the four presets
-│   └── ImageProcessor.kt    #   bitmap application, single pass
-├── io/                      # gallery in / out
-│   ├── ImageImporter.kt     #   decode + downsample + EXIF fix
-│   └── ImageExporter.kt     #   MediaStore / file export
-└── ui/
-    ├── CropOverlayView.kt   # interactive crop rectangle
-    ├── EditorPagerAdapter.kt# the four tool tabs
-    └── tabs/                # Light / Color / Filters / Transform
+1. Download the APK file.
+2. Transfer the APK to an Android device.
+3. Open the APK file.
+4. Allow installation from the requested source if prompted.
+5. Complete the installation and launch PixelCraft.
 
-app/src/test/                # JUnit tests for the color engine
-```
+## 7. Project Screenshots
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the design rationale and
-[CONTRIBUTING.md](CONTRIBUTING.md) for the two-contributor workflow.
+Screenshots of the application's interface and working modules can be added here.
 
-## Documentation
+## 8. Learning Outcomes
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) — how the code is organized and why
-- [CONTRIBUTING.md](CONTRIBUTING.md) — branches, PRs, file ownership
-- [TESTING.md](TESTING.md) — unit tests + the manual test checklist
-- [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md) — 5-minute professor demo script
+- Gained practical experience in Android application development.
+- Understood the basic structure of an Android project.
+- Explored photography-related application design.
+- Gained experience using Android Studio and Gradle.
+- Learned to use AI-assisted development tools for programming and debugging.
 
-## Screenshots
+## 9. AI Assistance Declaration
 
-_(Add screenshots here after the first run: open the emulator, take
-screenshots of the editor, filters and crop screens, drop them into a
-`/screenshots` folder and reference them like
-`![Editor](screenshots/editor.png)`.)_
+This project was developed with the assistance of Artificial Intelligence (AI) tools.
 
-## License
+AI assistance was used for code generation, debugging, implementation guidance, and problem-solving during development. The project was assembled and adapted as part of the academic coursework.
 
-Released under the [MIT License](LICENSE). All artwork in
-`app/src/main/res/drawable/` is original vector work created for this
-project.
+## 10. License
+
+This project is licensed under the **MIT License**. You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, subject to the conditions of the MIT License.
+
+See the [LICENSE](LICENSE) file for the complete license terms.
+
+## 11. Conclusion
+
+PixelCraft provided practical exposure to Android application development in the context of Computational Photography. The project helped explore photography-oriented mobile application design, Android development tools, and AI-assisted development.
