@@ -66,7 +66,7 @@ AI tools were used during development to assist with code generation, debugging,
   <img src="Screenshot 2026-10-31 080126.png" width="300">
   <img src="Screenshot 2026-10-31 080152.png" width="300">
   <img src="Screenshot 2026-10-31 080326.png" width="300">
-  <img src="sScreenshot 2026-10-31 080336.png" width="300">
+  <img src="Screenshot 2026-10-31 080336.png" width="300">
   <img src="Screenshot 2026-10-31 082021.png" width="300">
   <img src="Screenshot 2026-10-31 082030.png" width="300">
   <img src="Screenshot 2026-10-31 082056.png" width="300">
