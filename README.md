@@ -13,7 +13,7 @@
 
 ## 1. Introduction
 
-PixelCraft is an Android-based photography application developed as part of the Computational Photography course project.
+**PixelCraft – Android Photography Application** photography application developed as part of the **Computational Photography** course project.
 
 The application provides a dedicated interface for accessing and organizing photographs through different sections, including Photos and Collections. The project explores mobile application development in the field of digital photography and image management.
 
