@@ -60,8 +60,9 @@ AI tools were used during development to assist with code generation, debugging,
 5. Complete the installation and launch PixelCraft.
 
 ## 7. Project Screenshots
+Coming Soon
 
-Screenshots of the application's interface and working modules can be added here.
+
 
 ## 8. Learning Outcomes
 
