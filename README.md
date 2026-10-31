@@ -125,6 +125,7 @@ The following screenshots demonstrate the application interface, photo import pr
 </td>
 </tr>
 </table>
+
 ## 8. Learning Outcomes
 
 - Gained practical experience in Android application development.
